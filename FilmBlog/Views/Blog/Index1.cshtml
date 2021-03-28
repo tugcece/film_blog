@@ -1,0 +1,59 @@
+﻿@using FilmBlog.Models
+@model List<Blog>
+<link rel="stylesheet" src="extensions/fixed-columns/bootstrap-table-fixed-columns.css">
+
+@foreach (var i in Model)
+{
+    <head>
+        <title>@i.BlogName</title>
+    </head>
+
+
+    <div class="zrapper">
+        <div class="zcard" style="background-image: url('@i.BlogImage1')">
+            <div class="zcard__overlay"></div>
+            <div class="zcard__content"><span class="zcard__title">@i.BlogName</span></div>
+        </div>
+    </div>
+    <div class="container">
+
+
+
+        <div class="row justify-content-between">
+            <div class="col-sm-9" style="width:800px">
+                <br />
+                <br />
+                <h1 style="color:white ;font-size:100px">@i.BlogName</h1>
+                <h2 style="color:white">@i.BlogDescription</h2>
+
+                <p style="color:white">
+                    @i.BlogYazi
+                </p>
+
+            </div>
+
+            <div class="col-sm-3 ms-auto align-items-md-end">
+                <br />
+                <br />
+                <div class="grow">
+
+                    <img src="@i.BlogImage3" alt="" style="width: 250px;height: 150px;border-radius:4px">
+                    <br />
+                    <br />
+                    <img src="@i.BlogImage4" alt="" style="width: 250px; height: 150px;border-radius:4px">
+                    <br />
+                    <br />
+                    <img src="@i.BlogImage5" alt="" style="width: 250px; height: 150px;border-radius:4px">
+                    <br />
+                    <br />
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<br />
+<br />
+<br />
+<br />

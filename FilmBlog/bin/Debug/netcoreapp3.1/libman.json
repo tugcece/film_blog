@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.5.3",
+      "destination": "Properties/twitter-bootstrap/"
+    },
+    {
+      "library": "twitter-bootstrap@4.5.0",
+      "destination": "Properties/twitter-bootstrap/"
+    }
+  ]
+}

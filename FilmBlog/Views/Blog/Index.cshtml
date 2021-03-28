@@ -1,0 +1,95 @@
+﻿@using FilmBlog.Models
+@model List<Blog>
+
+
+<head>
+    <title>BLOGS</title>
+</head>
+
+@{ Layout = "/Views/Shared/_Layout.cshtml";}
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+<body>
+    <a href="https://www.netflix.com/tr-en/browse/genre/871341?dcuid=AMsySZYDUxn9s0leQHS5NEBRRoEv"><img src="~/images/ONEDIO-1110x250-MERYEM-3.jpg" style="margin-left:148px" /></a>
+    <br />
+    <br /><div class="wrapper">
+        <h2 class="effect-shine" style="color:ghostwhite;font-size:50px;margin-left:200px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">ALL BLOGS</h2>
+
+    </div>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-sm-9" style="width:800px">
+                @foreach (var i in Model)
+                {
+                    <div class="imovie-card">
+
+                        <div class="xcontainer">
+
+                            <a href="@i.Link"><img src="@i.BlogImage2" alt="xcover" class="xcover" /></a>
+
+                            <div class="xhero" style="background: url('@i.BlogImage1');background-size:cover">
+
+                                <div class="xdetails">
+
+                                    <div class="xtitle1">@i.BlogName </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="description">
+
+                                <div class="column2">
+
+                                    <p>@i.BlogYazi.Substring(0, 150) <a href="/Blog/Index1/@i.Id" style="color:white">read more</a></p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                }
+
+            </div>
+            <div class="col-sm-3 ms-auto align-items-md-end " style="background-color:black ;border-bottom-left-radius:15px;border-top-left-radius:15px ;height:1450px">
+                <br />
+                <h2 class="effect-shine" style="color:white;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">LAST BLOGS</h2>
+                <br />
+                @foreach (var i in @ViewBag.deger)
+                {
+                    <ul   class="caption-style-4" style="width:250px;height:150px">
+                        <li>
+                            <img src="@i.BlogImage3" alt="" style="width: 250px; height: 150px;border-radius:15px">
+                            <div class="caption" style="width: 250px; height: 150px">
+                                <div class="blur" style="width: 250px; height: 150px"></div>
+                                <div href="/Blog/Index1/@i.Id" class="caption-text" style="width: 250px; height: 150px">
+                                    <h1 >@i.BlogName</h1>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <br />
+                }
+                <br />
+
+                <a target="_blank" id="img_anch_CNGa54HKj-4CFcSGgwcdyDMEQQ" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjssWi6mAAwOdfnTuQvc-Y35KzYUej8xF-12MZ7TZT5sUOKy-GSq6oYLpPrahGJKp0C-O9VUFyDus8zvW9lRE1MT6fzS2HSUS7Vn9SjKidoByYQa2m0ONGqeSn76Ju72yRoNzPf-KKA&amp;sai=AMfl-YRTNGQINjZM6RSOiWbfQc5cTDgpmFOiupJqs-B13WnlNgjxI2hJ6vhVBHhqB8lK3vaSiq7vsxbTB76oFNDY7ERhPiK2J-yv9qQH2h6-OlxO&amp;sig=Cg0ArKJSzFsOIsZ9mMtf&amp;urlfix=1&amp;nx=105&amp;ny=236&amp;dim=300x500&amp;bg=!0dKl0sTNAAXKjztBylhoQQOZsAd0TQ8AAxYJTWgBBwoBjcuyYfGMWsCM6GerlxXgyBbjlLrxmqEqu6c5Gu5cy3rbkDNVZxvKDK1F6yDWWtKD7PbvQSgHdZOsVsp9U6q5OYO9yd90SONMYsMLzOusISmR-ZpFZW9DgFNWiTOtveKUzB_7vm6YsYh1iSC3a0-Elhc0H-v5FPPMG1LheI3Bnunwjlp2NYF1kGuWGGoTNX-1Ml7tlMwHqC4wupRK10RcHM49uQ7r5C9ryh9O1NyZ_qLbX_5RGgLYWM94MIEGtJRF9W3d1rlN6zICUI_zT1J2ObonKQ3tbs1lX8_b7-ORbTggstFPipfzhnZ9j0vWZFFhmyCQYbrjl4sNJ3KAEkXDS2LawsNg2MImmvYWe5dibi9psriXyUx8JnMe20Yd-GjXctZKBGiF6q8Nu76gShYyysUDy648kZo-cnUaJmFHgZKa94K41KWOr8AYpikOel5GrlDWjYIzxnxC4i-Rmb1iA5vqvuT6keOF8It-6HBI47VAK_JPj70zQuhZkyueZSH99PIrfQGDQtMptD9_MCKZAhOJBbLMvFsGczmix6RrFUDQ0wqH1ByYsarz75QHXLiofQpYpITndqV6qkbis4yAQnI869SuQ92nNXR9MTy_s3mpRGAD5dlDP_4IXu-DAx_ii6Gy9HbwB-QBmDVIeIuRLJ0AsjCFj3z1OKXnd9G1Eja2naJSIWeZJ0Akrf7wRmJg5ZJdpt32KlmoN1GLCTbYI3-6gfSesXqn9KJPGHPTlqAJ6RQRLEB5JH8D99cvRq1O-cKb79hqACLiLo5zd92x5VkIHDGkmsv09TT1jEiXrXzdIMa0dyUDmEz4yx6_qR3cRgdbHfrrDru3DzIgjUlbDgP4jMa5JIi9pq9QVmlLzcfH4fZ-Kn8GyFfn25KNfLLoqNG0Yzzxp6mYylBoS63etaS5xz3FaPQHqRYJRU9EYy58-qGMGFw4VIPdik4fV53J8McjnbablaF2Oi3Y2tUd5pL9WjxIMEuW1FiwqKudjR_3vzr9hCnrQZn2V7aKoustEtzA3ov3DBr3O891cSzaX5CT2yZk3dKLFfO1h2w6sGMuaX7ACO463IhLhzFFxq2Vilc0KwpQh_8539GO-T7pbWh0uftcGN0SJUuAfZUqwMMrncAniAaCs5_KLSDSgERju13h_IkJIcWvI-DEYKigSnK_3VVtZdKvOLWpamR4sGXCskfBmkE7vCY_0_HLeNpLHf4zahe1SC3MbnYsdgfg_Sb_S5o&amp;adurl=https://www.youtube.com/watch%3Fv%3DXMwVgw0yCpc%26dclid%3D%25edclid!"><img src="https://s0.2mdn.net/4924151/300x500.jpg" alt="Advertisement" border="0" width="250" height="400" style="display:block"></a>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <br />
+    <br />
+
+
+    <br />
+    <br />
+
+</body>

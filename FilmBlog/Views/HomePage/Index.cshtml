@@ -1,0 +1,60 @@
+﻿@using FilmBlog.Models
+@model List<Blog>
+<head>
+    <title>FILMSALAD</title>
+</head>
+<body style="background-color: #161616">
+    <main>
+        <div class="c-glitch" style="width:1250px;height:680px;background-image: url('https://i.sozcu.com.tr/wp-content/uploads/2019/07/12/iecrop/yuzuklerin-efendisi-hadi_16_9_1562916628.jpg');">
+            <div class="c-glitch__img" style="background-image: url('https://i.sozcu.com.tr/wp-content/uploads/2019/07/12/iecrop/yuzuklerin-efendisi-hadi_16_9_1562916628.jpg');"></div>
+            <div class="c-glitch__img" style="background-image: url('https://i.sozcu.com.tr/wp-content/uploads/2019/07/12/iecrop/yuzuklerin-efendisi-hadi_16_9_1562916628.jpg');"></div>
+            <div class="c-glitch__img" style="background-image: url('https://i.sozcu.com.tr/wp-content/uploads/2019/07/12/iecrop/yuzuklerin-efendisi-hadi_16_9_1562916628.jpg');"></div>
+            <div class="c-glitch__img" style="background-image: url('https://i.sozcu.com.tr/wp-content/uploads/2019/07/12/iecrop/yuzuklerin-efendisi-hadi_16_9_1562916628.jpg');"></div>
+            <div class="c-glitch__img" style="background-image: url('https://i.sozcu.com.tr/wp-content/uploads/2019/07/12/iecrop/yuzuklerin-efendisi-hadi_16_9_1562916628.jpg');"></div>
+        </div>
+
+        <br />
+        <nav class="navbar position-sticky  navbar-expand-lg " style="height:100px;width:1250px ;margin-left:50px;background-color:black;border-radius:4px">
+            <h1 style="font-size:75px;color:white">BEST OF</h1>
+        </nav>
+        <br />
+    </main>
+
+    <div class="band">
+        @foreach (var i in ViewBag.d)
+        {
+            <div class="item-2">
+                <a href="/Blog/Index1/@i.Id" class="scard">
+                    <div class="thumb" style="background-image: url('@i.BlogImage3')"></div>
+                    <article>
+                        <h1>@i.BlogName</h1>
+                    </article>
+                </a>
+            </div>
+        }
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="container">
+        <a href="https://www.beinconnect.com.tr/diziler/your-honor?utm_source=filmloverss&utm_medium=masthead&utm_campaign=beINCONNECT_Eglence_0121&utm_term=display&utm_content=YourHonor&dclid=CjgKEAiA0fr_BRCD1PLQhYfcsD8SJACf531BFZnW3pyxspWRNRqd3QONCTj-5Fbj7f7AAdONpKFPufD_BwE"> <img src="https://media.bantmag.com/wp-content/uploads/2020/12/Your-Honor1150x286.jpg" style="margin-left:-15px" /></a>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <nav class="navbar position-sticky navbar-expand-lg " style="height:100px;width:1250px;border-radius:4px ;margin-left:50px;background-color:black">
+        <h1 style="font-size:75px;color:white">SHORT FILM OF THE WEEK</h1>
+    </nav>
+    <br />
+
+    <div class="embed-responsive embed-responsive-1by1" style="height:580px;width:1100px;margin-left:120px;border-radius:4px">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/VuVKX-x9ABM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br />
+    <br />
+
+
+</body>
